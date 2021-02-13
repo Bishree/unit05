@@ -7,4 +7,5 @@ struct User {
     sign_in_count: u64,
     active: bool,
 
+
 }
