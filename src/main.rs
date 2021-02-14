@@ -10,6 +10,9 @@ impl Rectangle{
     fn circul (&self) -> u32{
         self.width*2 + self.height*2
     }
+    fn can_hold (&self, other:&Rectangle) -> bool {
+        self.width>other.width && self.height>other.height
+    }
 }
 
 fn main() {
@@ -17,9 +20,6 @@ fn main() {
         width: 30,
         height: 50,
     };
-    // println!(" the area of the rectangle is: {} \n \
-    //             the lines lenth of regtnagle is: {}",
-    //                 rec1.area(), rec1.circul())
     let rec2 = Rectangle{
         width: 10,
         height: 40,
@@ -28,6 +28,9 @@ fn main() {
         width: 60,
         height: 45,
     };
+    println!(" the area of the rectangle is: {} \n \
+                the lines lenth of regtnagle is: {}",
+             rec1.area(), rec1.circul());
     println!("can rec1 hold rec2? {}", rec1.can_hold(&rec2));
     println!("can rec1 hold rec3? {}", rec1.can_hold(&rec3));
 }
