@@ -13,6 +13,12 @@ impl Rectangle{
     fn can_hold (&self, other:&Rectangle) -> bool {
         self.width>other.width && self.height>other.height
     }
+    fn square (size:u32) -> Rectangle{
+        Rectangle{
+            width: size,
+            height: size,
+        }
+    }
 }
 
 fn main() {
@@ -28,6 +34,7 @@ fn main() {
         width: 60,
         height: 45,
     };
+    let seq = Rectangle::square(3);
     println!(" the area of the rectangle is: {} \n \
                 the lines lenth of regtnagle is: {}",
              rec1.area(), rec1.circul());
