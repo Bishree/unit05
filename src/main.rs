@@ -17,8 +17,17 @@ fn main() {
         width: 30,
         height: 50,
     };
-    println!(" the area of the rectangle is: {} \n \
-                the lines lenth of regtnagle is: {}",
-                    rec1.area(), rec1.circul())
-
+    // println!(" the area of the rectangle is: {} \n \
+    //             the lines lenth of regtnagle is: {}",
+    //                 rec1.area(), rec1.circul())
+    let rec2 = Rectangle{
+        width: 10,
+        height: 40,
+    };
+    let rec3 = Rectangle{
+        width: 60,
+        height: 45,
+    };
+    println!("can rec1 hold rec2? {}", rec1.can_hold(&rec2));
+    println!("can rec1 hold rec3? {}", rec1.can_hold(&rec3));
 }
